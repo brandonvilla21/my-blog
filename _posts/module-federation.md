@@ -1,7 +1,7 @@
 ---
 title: 'Module Federation'
 description: 'A first look into Module Federation'
-coverImage: '/module-federation.png'
+coverImage: '/module-federation-bn.jpeg'
 ---
 
 ## What is Module Federation?

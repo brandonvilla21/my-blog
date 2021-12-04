@@ -4,8 +4,16 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import Footer from "../components/Footer";
 import styles from "../styles/Home.module.css";
+// @ts-ignore
+import smoothscroll from 'smoothscroll-polyfill';
+import { useEffect } from "react";
+
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    smoothscroll.polyfill();
+  }, [])
+
   return (
     <div className={styles.container}>
       <Head>
