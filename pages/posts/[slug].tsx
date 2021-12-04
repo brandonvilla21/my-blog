@@ -6,6 +6,10 @@ import {
   markdownToHtml,
 } from "../../utils/markdown-parser";
 import Head from "next/head";
+import Image from "next/image";
+import styles from "../../styles/Home.module.css";
+import stylesPost from "../../styles/Post.module.css";
+import Footer from "../../components/Footer";
 
 function Post({ post }: any): JSX.Element {
   const router = useRouter();
@@ -15,11 +19,24 @@ function Post({ post }: any): JSX.Element {
   }
 
   return (
-    <article>
+    <article className={styles.article}>
       <Head>
-        <title>Some title from the .MD</title>
+        <title>{post.title}</title>
       </Head>
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+
+      <main className={styles.main}>
+        <Image
+          className={styles.card__image}
+          src={post.coverImage}
+          alt="Post cover image"
+          width={800}
+          height={300}
+        />
+        <h1 className={stylesPost.title}>{post.title}</h1>
+        <p className={stylesPost.description}>{post.description}</p>
+        <div className={stylesPost.main__post_content} dangerouslySetInnerHTML={{ __html: post.content }} />
+      </main>
+      <Footer />
     </article>
   );
 }
@@ -27,7 +44,7 @@ function Post({ post }: any): JSX.Element {
 export async function getStaticProps({ params }: any) {
   const post = getPostBySlug(params.slug, [
     "title",
-    "date",
+    "description",
     "slug",
     "content",
     "coverImage",

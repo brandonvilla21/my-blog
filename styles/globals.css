@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -13,4 +14,31 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+pre code {
+  display: block;
+  background: none;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  max-width: 100%;
+  min-width: 100px;
+}
+
+p > code,
+li > code,
+dd > code,
+td > code,
+pre {
+  background: #ffeff0;
+  word-wrap: break-word;
+  box-decoration-break: clone;
+  padding: .2rem .4rem .2rem;
+  border-radius: .4rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
 }

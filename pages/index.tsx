@@ -16,11 +16,48 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <div className={styles.main__introduction}>
-          <h1>My Personal Website</h1>
+          <Image
+            className={styles.main__picture}
+            src="/brandon.png"
+            alt="Brandon image"
+            width={300}
+            height={300}
+          />
+          <h1>{"Hello! I'm Brandon Villa"}</h1>
           <p>
-            By - <strong>Brandon Villa</strong>
+            I am a Software Engineer which loves to learn new things that help
+            me to grow my skills as an engineer. I am a very enthusiastic person
+            and I always try to get involved in interesting projects where I can
+            collaborate with awesome people.
           </p>
-          <a href="#posts">Go to my posts</a>
+          <div className={styles.main__social}>
+            <a
+              href="https://www.linkedin.com/in/brandon-villa-622522155/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+            {" · "}
+            <a
+              href="https://twitter.com/brandonVilCa21"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Twitter
+            </a>
+            {" · "}
+            <a
+              href="https://github.com/brandonvilla21"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
+          <strong>
+            <a className={styles.main__button} href="#posts">See my latest posts!</a>
+          </strong>
         </div>
         <Posts />
       </main>
@@ -32,7 +69,7 @@ const Home: NextPage = () => {
 function Posts() {
   return (
     <section id="posts">
-      <h2>My Posts</h2>
+      <h2 className={styles.posts__title}>My Posts</h2>
       <div className={styles.main__posts}>
         <Card
           title="Module Federation"
@@ -48,7 +85,7 @@ function Posts() {
         />
         <Card
           title="Build a website in one day"
-          description="How I built my personal website in one day..."
+          description="How I built my personal website in one day"
           image="/webdev.png"
           url="/posts/build-a-website"
         />
