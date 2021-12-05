@@ -22,3 +22,7 @@
 .main__post_content > p {
   text-align: justify;
 }
+
+.main__post_content * a {
+  text-decoration: underline;
+}
