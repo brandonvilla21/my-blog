@@ -162,7 +162,7 @@
 }
 
 .card {
-  margin: 1rem;
+  margin: 1rem 0px;
   padding: 1.5rem;
   text-align: left;
   color: inherit;
@@ -171,6 +171,7 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 330px;
+  justify-self: center;
 }
 
 .card:hover,
