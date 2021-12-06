@@ -33,8 +33,7 @@ const Home: NextPage = () => {
           />
           <h1>{"Hello! I'm Brandon Villa"}</h1>
           <p>
-            I am a Software Engineer which loves to learn new things that help
-            me to grow my skills as an engineer. I am a very enthusiastic person
+            I am a Software Engineer who loves to learn new things. I am a very enthusiastic person
             and I always try to get involved in interesting projects where I can
             collaborate with awesome people.
           </p>
